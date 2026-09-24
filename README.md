@@ -22,6 +22,29 @@ The application configures 20 settings and generates 154 commands per complete p
 
 Profiles can be saved while the game is running. Hotkey edits are also allowed, with backups and concurrent-change checks. INI writes use the existing normal player-binding table: `ColdGame.ColdPlayerInput` when it contains non-SCS bindings, otherwise `Engine.PlayerInput`.
 
+## Screenshots
+
+### Main interface
+
+![Subsistence Custom Settings - Main interface](docs/images/main-interface.png)
+
+### Profiles and gameplay settings
+
+![Subsistence Custom Settings - Profiles](docs/images/profiles.png)
+
+### Hotkey configuration
+
+![Subsistence Custom Settings - Hotkeys](docs/images/hotkeys.png)
+
+## Requirements / Compatibility
+
+- Windows 10 or Windows 11, 64-bit.
+- Steam version of Subsistence.
+- No separate .NET installation is required; the release executable is self-contained.
+- The application must be able to write to the selected Subsistence installation folders.
+- SCS creates and updates profile files in the game's `Binaries` folder and manages hotkey bindings through `UDKInput.ini`.
+- Steam Workshop, Nexus Mods and GitHub Releases can all be used as distribution sources; the application works independently of how it was obtained.
+
 ## Security / What this app does
 
 The application has no application-level internet connection, telemetry, code injection, background service, or self-updater. It does not modify game executables during normal use or request administrator elevation. File permissions can still prevent changes to protected folders.
@@ -55,4 +78,4 @@ Subsistence Custom Settings is licensed under the MIT License.
 
 You are free to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software, provided that the original copyright notice and license are preserved.
 
-See [LICENSE](LICENSE.md) for the full license text.
+This project is licensed under the [MIT License](LICENSE.md).
