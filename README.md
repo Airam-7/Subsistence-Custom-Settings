@@ -4,7 +4,8 @@ A Windows companion application for configuring Subsistence gameplay profiles an
 
 **Version 2.0.5 · Windows x64 · C# / WPF / .NET 9**
 
-This repository is source-available for transparency and security auditing. It is not currently licensed as open-source software. See [COPYRIGHT.md](COPYRIGHT.md).
+This project is open source and licensed under the [MIT License](LICENSE).
+The source code is publicly available for transparency, security review, learning, and community contributions.
 
 ## Download and use
 
@@ -43,6 +44,15 @@ See [validation notes](docs/VALIDATION.md), [architecture](docs/ARCHITECTURE.md)
 
 ## Reports
 
-Use repository Issues for bugs. Include the application version and steps to reproduce, but do not post personal paths, private INI files, or credentials. Please discuss reuse or contributions with the author before submitting adapted code; no general reuse license is granted.
+Use repository Issues for bugs. Include the application version and steps to reproduce, but do not post personal paths, private INI files, or credentials. Contributions, forks and adaptations are welcome under the terms of the MIT License.
 
-This is an independent community project and is not an official Subsistence application.
+Subsistence Custom Settings is an independent community project and is not affiliated with or endorsed by the developer of Subsistence.
+
+
+## License
+
+Subsistence Custom Settings is licensed under the MIT License.
+
+You are free to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software, provided that the original copyright notice and license are preserved.
+
+See [LICENSE](LICENSE) for the full license text.
