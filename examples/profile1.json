@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "profileId": "Profile1",
+  "displayName": "Casual",
+  "catalogVersion": "2.0.1",
+  "values": {
+    "BcuMass": 1,
+    "BcuPower": 1,
+    "ButcherYield": 1,
+    "CampfireFuelDuration": 1,
+    "CraftSpeed": 1,
+    "CrateYield": 1,
+    "CropHarvestYield": 1,
+    "FishTrapCompetitionRadius": 1000,
+    "GeneratorFuelDuration": 1,
+    "GeneratorPower": 1,
+    "MassPowerConsumption": 1,
+    "MassProduction": 1,
+    "PassiveWildlife": false,
+    "RefineryPower": 1,
+    "RefiningSpeed": 1,
+    "TrapAttemptSpeed": 1,
+    "TrapAttractionRadius": 6000,
+    "VegetationYield": 1,
+    "WeaponUpgradeSpeed": 1,
+    "WoodYield": 1
+  }
+}

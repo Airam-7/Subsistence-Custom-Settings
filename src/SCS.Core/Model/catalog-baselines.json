@@ -1,0 +1,2058 @@
+[
+  {
+    "Class": "ColdInventoryItem_Log",
+    "Property": "Count",
+    "Original": "1",
+    "Paragraph": 489,
+    "Baseline": 1.0
+  },
+  {
+    "Class": "ColdLootVegetation_Berries",
+    "Property": "LootItemsTier1",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Berries',Chance=100,countMin=1,countMax=1))",
+    "Paragraph": 491,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Berries",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "ColdLootVegetation_FiberPatch",
+    "Property": "LootItemsTier1",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Fibers',Chance=100,countMin=1,countMax=1))",
+    "Paragraph": 492,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Fibers",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "ColdLootVegetation_FiberPlant",
+    "Property": "LootItemsTier1",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Fibers',Chance=100,countMin=1,countMax=1))",
+    "Paragraph": 493,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Fibers",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "ColdLootVegetation_Carrot",
+    "Property": "LootItemsTier1",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Carrots',Chance=100,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_Seed_Carrot',Chance=100,countMin=1,countMax=1))",
+    "Paragraph": 494,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Carrots",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Seed_Carrot",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "ColdLootVegetation_Clam",
+    "Property": "LootItemsTier1",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Pearls',Chance=100,countMin=1,countMax=1))",
+    "Paragraph": 495,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Pearls",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "ColdLootVegetation_Cotton",
+    "Property": "LootItemsTier1",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Cotton',Chance=100,countMin=1,countMax=1))",
+    "Paragraph": 496,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Cotton",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "ColdLootVegetation_Cotton",
+    "Property": "LootItemsTier2",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Seed_Cotton',Chance=100,countMin=1,countMax=1))",
+    "Paragraph": 497,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Seed_Cotton",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "ColdLootVegetation_Kelp",
+    "Property": "LootItemsTier1",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Kelp',Chance=100,countMin=1,countMax=1))",
+    "Paragraph": 498,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Kelp",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "ColdLootVegetation_LogPile",
+    "Property": "LootItemsTier1",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Log',Chance=100,countMin=1,countMax=1))",
+    "Paragraph": 499,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Log",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "ColdLootVegetation_MedicinalCluster",
+    "Property": "LootItemsTier1",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_MedicinalHerbs',Chance=100,countMin=1,countMax=1))",
+    "Paragraph": 500,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_MedicinalHerbs",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "ColdLootVegetation_Onion",
+    "Property": "LootItemsTier1",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Onions',Chance=100,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_Seed_Onion',Chance=100,countMin=1,countMax=1))",
+    "Paragraph": 501,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Onions",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Seed_Onion",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "ColdLootVegetation_Potato",
+    "Property": "LootItemsTier1",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Potatoes',Chance=100,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_Seed_Potato',Chance=100,countMin=1,countMax=1))",
+    "Paragraph": 502,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Potatoes",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Seed_Potato",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "ColdLootVegetation_RosehipBerries",
+    "Property": "LootItemsTier1",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_RosehipBerries',Chance=100,countMin=1,countMax=1))",
+    "Paragraph": 503,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_RosehipBerries",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "ColdLootVegetation_ScrapMetal",
+    "Property": "LootItemsTier1",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_ScrapMetal',Chance=100,countMin=1,countMax=1))",
+    "Paragraph": 504,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_ScrapMetal",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "ColdLootVegetation_Strawberry",
+    "Property": "LootItemsTier1",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Strawberry',Chance=100,countMin=1,countMax=1))",
+    "Paragraph": 505,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Strawberry",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "ColdLootVegetation_Wheat",
+    "Property": "LootItemsTier1",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Wheat',Chance=100,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_Seed_Wheat',Chance=100,countMin=1,countMax=1))",
+    "Paragraph": 506,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Wheat",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Seed_Wheat",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "ColdLootContainer",
+    "Property": "LootItemsTier1",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Nails',Chance=100,countMin=2,countMax=6),(ItemClass=Class'ColdGame.ColdInventoryItem_Berries',Chance=50,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_Matches',Chance=20,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_Ammo9mm',Chance=10,countMin=1,countMax=2),(ItemClass=Class'ColdGame.ColdInventoryItem_AmmoCasings',Chance=50,countMin=1,countMax=2),(ItemClass=Class'ColdGame.ColdInventoryItem_Gunpowder',Chance=50,countMin=2,countMax=4),(ItemClass=Class'ColdGame.ColdInventoryItem_WoodPlanks',Chance=30,countMin=1,countMax=2),(ItemClass=Class'ColdGame.ColdInventoryItem_ElectricalComponents',Chance=80,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_ScrapMetal',Chance=50,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_Cloth',Chance=12,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_Biofuel',Chance=50,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_Water',Chance=5,countMin=1,countMax=1))",
+    "Paragraph": 509,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Nails",
+        "Chance": 100,
+        "CountMin": 2,
+        "CountMax": 6
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Berries",
+        "Chance": 50,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Matches",
+        "Chance": 20,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Ammo9mm",
+        "Chance": 10,
+        "CountMin": 1,
+        "CountMax": 2
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_AmmoCasings",
+        "Chance": 50,
+        "CountMin": 1,
+        "CountMax": 2
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Gunpowder",
+        "Chance": 50,
+        "CountMin": 2,
+        "CountMax": 4
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_WoodPlanks",
+        "Chance": 30,
+        "CountMin": 1,
+        "CountMax": 2
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_ElectricalComponents",
+        "Chance": 80,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_ScrapMetal",
+        "Chance": 50,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Cloth",
+        "Chance": 12,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Biofuel",
+        "Chance": 50,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Water",
+        "Chance": 5,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "ColdLootContainer_Ammo",
+    "Property": "LootItemsTier1",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Nails',Chance=100,countMin=2,countMax=6),(ItemClass=Class'ColdGame.ColdInventoryItem_Berries',Chance=50,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_Matches',Chance=20,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_Ammo9mm',Chance=10,countMin=1,countMax=2),(ItemClass=Class'ColdGame.ColdInventoryItem_AmmoCasings',Chance=50,countMin=1,countMax=2),(ItemClass=Class'ColdGame.ColdInventoryItem_Gunpowder',Chance=50,countMin=2,countMax=4),(ItemClass=Class'ColdGame.ColdInventoryItem_WoodPlanks',Chance=30,countMin=1,countMax=2),(ItemClass=Class'ColdGame.ColdInventoryItem_ElectricalComponents',Chance=80,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_ScrapMetal',Chance=50,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_Cloth',Chance=12,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_Biofuel',Chance=50,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_Water',Chance=5,countMin=1,countMax=1))",
+    "Paragraph": 510,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Nails",
+        "Chance": 100,
+        "CountMin": 2,
+        "CountMax": 6
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Berries",
+        "Chance": 50,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Matches",
+        "Chance": 20,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Ammo9mm",
+        "Chance": 10,
+        "CountMin": 1,
+        "CountMax": 2
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_AmmoCasings",
+        "Chance": 50,
+        "CountMin": 1,
+        "CountMax": 2
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Gunpowder",
+        "Chance": 50,
+        "CountMin": 2,
+        "CountMax": 4
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_WoodPlanks",
+        "Chance": 30,
+        "CountMin": 1,
+        "CountMax": 2
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_ElectricalComponents",
+        "Chance": 80,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_ScrapMetal",
+        "Chance": 50,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Cloth",
+        "Chance": 12,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Biofuel",
+        "Chance": 50,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Water",
+        "Chance": 5,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "ColdLootContainer_Ammo",
+    "Property": "LootItemsTier2",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Ammo9mm',Chance=70,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_Ammo9mm',Chance=90,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_AmmoArrows',Chance=70,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_AmmoShotgunShells',Chance=50,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_AmmoRifleRounds',Chance=50,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_Ammo44Rounds',Chance=20,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_AmmoCasings',Chance=100,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_AmmoCasings',Chance=80,countMin=1,countMax=2),(ItemClass=Class'ColdGame.ColdInventoryItem_Gunpowder',Chance=100,countMin=2,countMax=4),(ItemClass=Class'ColdGame.ColdInventoryItem_Gunpowder',Chance=80,countMin=2,countMax=4),(ItemClass=Class'ColdGame.ColdInventoryItem_Gunpowder',Chance=80,countMin=2,countMax=4))",
+    "Paragraph": 511,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Ammo9mm",
+        "Chance": 70,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Ammo9mm",
+        "Chance": 90,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_AmmoArrows",
+        "Chance": 70,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_AmmoShotgunShells",
+        "Chance": 50,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_AmmoRifleRounds",
+        "Chance": 50,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Ammo44Rounds",
+        "Chance": 20,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_AmmoCasings",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_AmmoCasings",
+        "Chance": 80,
+        "CountMin": 1,
+        "CountMax": 2
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Gunpowder",
+        "Chance": 100,
+        "CountMin": 2,
+        "CountMax": 4
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Gunpowder",
+        "Chance": 80,
+        "CountMin": 2,
+        "CountMax": 4
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Gunpowder",
+        "Chance": 80,
+        "CountMin": 2,
+        "CountMax": 4
+      }
+    ]
+  },
+  {
+    "Class": "ColdLootContainer_BuildingSupplies",
+    "Property": "LootItemsTier1",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Nails',Chance=100,countMin=2,countMax=6),(ItemClass=Class'ColdGame.ColdInventoryItem_Berries',Chance=50,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_Matches',Chance=20,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_Ammo9mm',Chance=10,countMin=1,countMax=2),(ItemClass=Class'ColdGame.ColdInventoryItem_AmmoCasings',Chance=50,countMin=1,countMax=2),(ItemClass=Class'ColdGame.ColdInventoryItem_Gunpowder',Chance=50,countMin=2,countMax=4),(ItemClass=Class'ColdGame.ColdInventoryItem_WoodPlanks',Chance=30,countMin=1,countMax=2),(ItemClass=Class'ColdGame.ColdInventoryItem_ElectricalComponents',Chance=80,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_ScrapMetal',Chance=50,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_Cloth',Chance=12,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_Biofuel',Chance=50,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_Water',Chance=5,countMin=1,countMax=1))",
+    "Paragraph": 512,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Nails",
+        "Chance": 100,
+        "CountMin": 2,
+        "CountMax": 6
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Berries",
+        "Chance": 50,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Matches",
+        "Chance": 20,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Ammo9mm",
+        "Chance": 10,
+        "CountMin": 1,
+        "CountMax": 2
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_AmmoCasings",
+        "Chance": 50,
+        "CountMin": 1,
+        "CountMax": 2
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Gunpowder",
+        "Chance": 50,
+        "CountMin": 2,
+        "CountMax": 4
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_WoodPlanks",
+        "Chance": 30,
+        "CountMin": 1,
+        "CountMax": 2
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_ElectricalComponents",
+        "Chance": 80,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_ScrapMetal",
+        "Chance": 50,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Cloth",
+        "Chance": 12,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Biofuel",
+        "Chance": 50,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Water",
+        "Chance": 5,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "ColdLootContainer_BuildingSupplies",
+    "Property": "LootItemsTier2",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Nails',Chance=100,countMin=4,countMax=6),(ItemClass=Class'ColdGame.ColdInventoryItem_Nails',Chance=100,countMin=4,countMax=5),(ItemClass=Class'ColdGame.ColdInventoryItem_WoodPlanks',Chance=30,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_ElectricalComponents',Chance=100,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_ElectricalComponents',Chance=100,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_ScrapMetal',Chance=100,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_ScrapMetal',Chance=100,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_Cordage',Chance=50,countMin=1,countMax=2))",
+    "Paragraph": 513,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Nails",
+        "Chance": 100,
+        "CountMin": 4,
+        "CountMax": 6
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Nails",
+        "Chance": 100,
+        "CountMin": 4,
+        "CountMax": 5
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_WoodPlanks",
+        "Chance": 30,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_ElectricalComponents",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_ElectricalComponents",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_ScrapMetal",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_ScrapMetal",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Cordage",
+        "Chance": 50,
+        "CountMin": 1,
+        "CountMax": 2
+      }
+    ]
+  },
+  {
+    "Class": "ColdLootContainer_Medical",
+    "Property": "LootItemsTier1",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Nails',Chance=100,countMin=2,countMax=6),(ItemClass=Class'ColdGame.ColdInventoryItem_Berries',Chance=50,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_Matches',Chance=20,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_Ammo9mm',Chance=10,countMin=1,countMax=2),(ItemClass=Class'ColdGame.ColdInventoryItem_AmmoCasings',Chance=50,countMin=1,countMax=2),(ItemClass=Class'ColdGame.ColdInventoryItem_Gunpowder',Chance=50,countMin=2,countMax=4),(ItemClass=Class'ColdGame.ColdInventoryItem_WoodPlanks',Chance=30,countMin=1,countMax=2),(ItemClass=Class'ColdGame.ColdInventoryItem_ElectricalComponents',Chance=80,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_ScrapMetal',Chance=50,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_Cloth',Chance=12,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_Biofuel',Chance=50,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_Water',Chance=5,countMin=1,countMax=1))",
+    "Paragraph": 514,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Nails",
+        "Chance": 100,
+        "CountMin": 2,
+        "CountMax": 6
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Berries",
+        "Chance": 50,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Matches",
+        "Chance": 20,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Ammo9mm",
+        "Chance": 10,
+        "CountMin": 1,
+        "CountMax": 2
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_AmmoCasings",
+        "Chance": 50,
+        "CountMin": 1,
+        "CountMax": 2
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Gunpowder",
+        "Chance": 50,
+        "CountMin": 2,
+        "CountMax": 4
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_WoodPlanks",
+        "Chance": 30,
+        "CountMin": 1,
+        "CountMax": 2
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_ElectricalComponents",
+        "Chance": 80,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_ScrapMetal",
+        "Chance": 50,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Cloth",
+        "Chance": 12,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Biofuel",
+        "Chance": 50,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Water",
+        "Chance": 5,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "ColdLootContainer_Medical",
+    "Property": "LootItemsTier2",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Bandage',Chance=60,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_Cloth',Chance=60,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_Feathers',Chance=100,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_Berries',Chance=100,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_Apple',Chance=70,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_Water',Chance=10,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_Biofuel',Chance=80,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_ProteinBar',Chance=60,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_Cordage',Chance=60,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_Splint',Chance=3,countMin=1,countMax=1))",
+    "Paragraph": 515,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Bandage",
+        "Chance": 60,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Cloth",
+        "Chance": 60,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Feathers",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Berries",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Apple",
+        "Chance": 70,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Water",
+        "Chance": 10,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Biofuel",
+        "Chance": 80,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_ProteinBar",
+        "Chance": 60,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Cordage",
+        "Chance": 60,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Splint",
+        "Chance": 3,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "ColdLootContainer_Medical",
+    "Property": "LootItemsTier3",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Seed_Tomato',Chance=100,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_Seed_Medicinal',Chance=100,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_Seed_Cotton',Chance=100,countMin=1,countMax=1))",
+    "Paragraph": 516,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Seed_Tomato",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Seed_Medicinal",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Seed_Cotton",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "WolfPawn",
+    "Property": "LootItemsTier1",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Steak',Chance=100,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_Liver',Chance=80,countMin=1,countMax=1))",
+    "Paragraph": 519,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Steak",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Liver",
+        "Chance": 80,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "WolfPawn",
+    "Property": "LootItemsTier2",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Fat',Chance=100,countMin=1,countMax=2))",
+    "Paragraph": 520,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Fat",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 2
+      }
+    ]
+  },
+  {
+    "Class": "WolfPawn",
+    "Property": "LootItemsTier3",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Cloth',Chance=100,countMin=1,countMax=1))",
+    "Paragraph": 521,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Cloth",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "ColdWhiteWolfPawn",
+    "Property": "LootItemsTier1",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Steak',Chance=100,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_Liver',Chance=80,countMin=1,countMax=1))",
+    "Paragraph": 523,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Steak",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Liver",
+        "Chance": 80,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "ColdWhiteWolfPawn",
+    "Property": "LootItemsTier2",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Fat',Chance=100,countMin=1,countMax=2))",
+    "Paragraph": 524,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Fat",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 2
+      }
+    ]
+  },
+  {
+    "Class": "ColdWhiteWolfPawn",
+    "Property": "LootItemsTier3",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Cloth',Chance=100,countMin=1,countMax=1))",
+    "Paragraph": 525,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Cloth",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "BearPawn",
+    "Property": "LootItemsTier1",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Steak',Chance=100,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_Liver',Chance=80,countMin=1,countMax=1))",
+    "Paragraph": 527,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Steak",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Liver",
+        "Chance": 80,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "BearPawn",
+    "Property": "LootItemsTier2",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Fat',Chance=100,countMin=1,countMax=2))",
+    "Paragraph": 528,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Fat",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 2
+      }
+    ]
+  },
+  {
+    "Class": "BearPawn",
+    "Property": "LootItemsTier3",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Cloth',Chance=100,countMin=1,countMax=1))",
+    "Paragraph": 529,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Cloth",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "ColdBlackBearPawn",
+    "Property": "LootItemsTier1",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Steak',Chance=100,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_Liver',Chance=80,countMin=1,countMax=1))",
+    "Paragraph": 531,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Steak",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Liver",
+        "Chance": 80,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "ColdBlackBearPawn",
+    "Property": "LootItemsTier2",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Fat',Chance=100,countMin=1,countMax=2))",
+    "Paragraph": 532,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Fat",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 2
+      }
+    ]
+  },
+  {
+    "Class": "ColdBlackBearPawn",
+    "Property": "LootItemsTier3",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Cloth',Chance=100,countMin=1,countMax=1))",
+    "Paragraph": 533,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Cloth",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "ColdCougarPawn",
+    "Property": "LootItemsTier1",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Steak',Chance=100,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_Liver',Chance=80,countMin=1,countMax=1))",
+    "Paragraph": 535,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Steak",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Liver",
+        "Chance": 80,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "ColdCougarPawn",
+    "Property": "LootItemsTier2",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Fat',Chance=100,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_Cloth',Chance=100,countMin=1,countMax=1))",
+    "Paragraph": 536,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Fat",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Cloth",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "ColdCougarPawn",
+    "Property": "LootItemsTier3",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Sinew',Chance=100,countMin=4,countMax=6))",
+    "Paragraph": 537,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Sinew",
+        "Chance": 100,
+        "CountMin": 4,
+        "CountMax": 6
+      }
+    ]
+  },
+  {
+    "Class": "ColdBoarPawn",
+    "Property": "LootItemsTier1",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_PorkChops',Chance=100,countMin=1,countMax=1))",
+    "Paragraph": 539,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_PorkChops",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "ColdBoarPawn",
+    "Property": "LootItemsTier2",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Fat',Chance=100,countMin=3,countMax=4))",
+    "Paragraph": 540,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Fat",
+        "Chance": 100,
+        "CountMin": 3,
+        "CountMax": 4
+      }
+    ]
+  },
+  {
+    "Class": "ColdBoarPawn",
+    "Property": "LootItemsTier3",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Cloth',Chance=100,countMin=1,countMax=1))",
+    "Paragraph": 541,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Cloth",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "ColdBoarPawn",
+    "Property": "LootItemsTier4",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Bacon',Chance=100,countMin=2,countMax=2))",
+    "Paragraph": 542,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Bacon",
+        "Chance": 100,
+        "CountMin": 2,
+        "CountMax": 2
+      }
+    ]
+  },
+  {
+    "Class": "ColdBoarPawn",
+    "Property": "LootItemsTier5",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Fat',Chance=100,countMin=1,countMax=1))",
+    "Paragraph": 543,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Fat",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "ColdMoosePawn",
+    "Property": "LootItemsTier1",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_RackOfRibs',Chance=100,countMin=1,countMax=1))",
+    "Paragraph": 545,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_RackOfRibs",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "ColdMoosePawn",
+    "Property": "LootItemsTier2",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Liver',Chance=100,countMin=1,countMax=1))",
+    "Paragraph": 546,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Liver",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "ColdMoosePawn",
+    "Property": "LootItemsTier3",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Antlers',Chance=100,countMin=2,countMax=2))",
+    "Paragraph": 547,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Antlers",
+        "Chance": 100,
+        "CountMin": 2,
+        "CountMax": 2
+      }
+    ]
+  },
+  {
+    "Class": "ColdMoosePawn",
+    "Property": "LootItemsTier4",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Cloth',Chance=100,countMin=2,countMax=2))",
+    "Paragraph": 548,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Cloth",
+        "Chance": 100,
+        "CountMin": 2,
+        "CountMax": 2
+      }
+    ]
+  },
+  {
+    "Class": "ColdMoosePawn",
+    "Property": "LootItemsTier5",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Fat',Chance=100,countMin=2,countMax=3))",
+    "Paragraph": 549,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Fat",
+        "Chance": 100,
+        "CountMin": 2,
+        "CountMax": 3
+      }
+    ]
+  },
+  {
+    "Class": "ColdMoosePawn",
+    "Property": "LootItemsTier6",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Sinew',Chance=100,countMin=3,countMax=4))",
+    "Paragraph": 550,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Sinew",
+        "Chance": 100,
+        "CountMin": 3,
+        "CountMax": 4
+      }
+    ]
+  },
+  {
+    "Class": "ColdDeerPawn",
+    "Property": "LootItemsTier1",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Steak',Chance=100,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_Liver',Chance=80,countMin=1,countMax=1))",
+    "Paragraph": 552,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Steak",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Liver",
+        "Chance": 80,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "ColdDeerPawn",
+    "Property": "LootItemsTier2",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Fat',Chance=100,countMin=1,countMax=2),(ItemClass=Class'ColdGame.ColdInventoryItem_Cloth',Chance=100,countMin=1,countMax=1))",
+    "Paragraph": 553,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Fat",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 2
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Cloth",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "ColdDeerPawn",
+    "Property": "LootItemsTier3",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Antlers',Chance=100,countMin=2,countMax=2))",
+    "Paragraph": 554,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Antlers",
+        "Chance": 100,
+        "CountMin": 2,
+        "CountMax": 2
+      }
+    ]
+  },
+  {
+    "Class": "RabbitPawn",
+    "Property": "LootItemsTier1",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Steak',Chance=100,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_Liver',Chance=80,countMin=1,countMax=1))",
+    "Paragraph": 556,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Steak",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Liver",
+        "Chance": 80,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "RabbitPawn",
+    "Property": "LootItemsTier2",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Fat',Chance=100,countMin=1,countMax=2))",
+    "Paragraph": 557,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Fat",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 2
+      }
+    ]
+  },
+  {
+    "Class": "RabbitPawn",
+    "Property": "LootItemsTier3",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Cloth',Chance=100,countMin=1,countMax=1))",
+    "Paragraph": 558,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Cloth",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "ChickenPawn",
+    "Property": "LootItemsTier1",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Steak',Chance=100,countMin=1,countMax=1),(ItemClass=Class'ColdGame.ColdInventoryItem_Liver',Chance=80,countMin=1,countMax=1))",
+    "Paragraph": 560,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Steak",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      },
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Liver",
+        "Chance": 80,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "ChickenPawn",
+    "Property": "LootItemsTier2",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Fat',Chance=100,countMin=1,countMax=2))",
+    "Paragraph": 561,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Fat",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 2
+      }
+    ]
+  },
+  {
+    "Class": "ChickenPawn",
+    "Property": "LootItemsTier3",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Cloth',Chance=100,countMin=1,countMax=1))",
+    "Paragraph": 562,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Cloth",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "ColdEaglePawn",
+    "Property": "LootItemsTier1",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Steak',Chance=100,countMin=1,countMax=1))",
+    "Paragraph": 564,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Steak",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "ColdEaglePawn",
+    "Property": "LootItemsTier2",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Feathers',Chance=100,countMin=4,countMax=5))",
+    "Paragraph": 565,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Feathers",
+        "Chance": 100,
+        "CountMin": 4,
+        "CountMax": 5
+      }
+    ]
+  },
+  {
+    "Class": "ColdEaglePawn",
+    "Property": "LootItemsTier3",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_EagleFeathersDamaged',Chance=100,countMin=3,countMax=4))",
+    "Paragraph": 566,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_EagleFeathersDamaged",
+        "Chance": 100,
+        "CountMin": 3,
+        "CountMax": 4
+      }
+    ]
+  },
+  {
+    "Class": "ColdEaglePawn",
+    "Property": "LootItemsTier4",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Feathers',Chance=100,countMin=1,countMax=1))",
+    "Paragraph": 567,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Feathers",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "ColdBatPawn",
+    "Property": "LootItemsTier1",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Steak',Chance=100,countMin=1,countMax=1))",
+    "Paragraph": 569,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Steak",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "ColdBatPawn",
+    "Property": "LootItemsTier2",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Cloth',Chance=100,countMin=1,countMax=1))",
+    "Paragraph": 570,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Cloth",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "ColdBatPawn",
+    "Property": "LootItemsTier3",
+    "Original": "((ItemClass=Class'ColdGame.ColdInventoryItem_Cloth',Chance=100,countMin=1,countMax=1))",
+    "Paragraph": 571,
+    "Loot": [
+      {
+        "ItemClass": "ColdGame.ColdInventoryItem_Cloth",
+        "Chance": 100,
+        "CountMin": 1,
+        "CountMax": 1
+      }
+    ]
+  },
+  {
+    "Class": "ColdInventoryItem",
+    "Property": "CraftTime",
+    "Original": "15",
+    "Paragraph": 574,
+    "Baseline": 15.0
+  },
+  {
+    "Class": "ColdInventoryItem_Buildable",
+    "Property": "CraftTime",
+    "Original": "18",
+    "Paragraph": 575,
+    "Baseline": 18.0
+  },
+  {
+    "Class": "ColdInventoryItem_AdvancedMechanicalParts",
+    "Property": "CraftTime",
+    "Original": "150",
+    "Paragraph": 576,
+    "Baseline": 150.0
+  },
+  {
+    "Class": "ColdInventoryItem_Alcohol",
+    "Property": "CraftTime",
+    "Original": "240",
+    "Paragraph": 577,
+    "Baseline": 240.0
+  },
+  {
+    "Class": "ColdInventoryItem_Ammo44Rounds",
+    "Property": "CraftTime",
+    "Original": "20",
+    "Paragraph": 578,
+    "Baseline": 20.0
+  },
+  {
+    "Class": "ColdInventoryItem_Ammo44RoundsIncendiary",
+    "Property": "CraftTime",
+    "Original": "20",
+    "Paragraph": 579,
+    "Baseline": 20.0
+  },
+  {
+    "Class": "ColdInventoryItem_AmmoArrows",
+    "Property": "CraftTime",
+    "Original": "20",
+    "Paragraph": 580,
+    "Baseline": 20.0
+  },
+  {
+    "Class": "ColdInventoryItem_AmmoArrowsGrenade",
+    "Property": "CraftTime",
+    "Original": "20",
+    "Paragraph": 581,
+    "Baseline": 20.0
+  },
+  {
+    "Class": "ColdInventoryItem_AmmoArrowsPremium",
+    "Property": "CraftTime",
+    "Original": "20",
+    "Paragraph": 582,
+    "Baseline": 20.0
+  },
+  {
+    "Class": "ColdInventoryItem_AmmoRifleRounds",
+    "Property": "CraftTime",
+    "Original": "20",
+    "Paragraph": 583,
+    "Baseline": 20.0
+  },
+  {
+    "Class": "ColdInventoryItem_AmmoRifleRoundsIncendiary",
+    "Property": "CraftTime",
+    "Original": "20",
+    "Paragraph": 584,
+    "Baseline": 20.0
+  },
+  {
+    "Class": "ColdInventoryItem_BaconAndEggSandwich",
+    "Property": "CraftTime",
+    "Original": "75",
+    "Paragraph": 585,
+    "Baseline": 75.0
+  },
+  {
+    "Class": "ColdInventoryItem_Bandage",
+    "Property": "CraftTime",
+    "Original": "8",
+    "Paragraph": 586,
+    "Baseline": 8.0
+  },
+  {
+    "Class": "ColdInventoryItem_BlueberryPie",
+    "Property": "CraftTime",
+    "Original": "70",
+    "Paragraph": 587,
+    "Baseline": 70.0
+  },
+  {
+    "Class": "ColdInventoryItem_BoiledEggs",
+    "Property": "CraftTime",
+    "Original": "60",
+    "Paragraph": 588,
+    "Baseline": 60.0
+  },
+  {
+    "Class": "ColdInventoryItem_BreadDough",
+    "Property": "CraftTime",
+    "Original": "18",
+    "Paragraph": 589,
+    "Baseline": 18.0
+  },
+  {
+    "Class": "ColdInventoryItem_BreadLoaf",
+    "Property": "CraftTime",
+    "Original": "150",
+    "Paragraph": 590,
+    "Baseline": 150.0
+  },
+  {
+    "Class": "ColdInventoryItem_Buildable_AirConditioner",
+    "Property": "CraftTime",
+    "Original": "12",
+    "Paragraph": 591,
+    "Baseline": 12.0
+  },
+  {
+    "Class": "ColdInventoryItem_Buildable_Campfire",
+    "Property": "CraftTime",
+    "Original": "12",
+    "Paragraph": 592,
+    "Baseline": 12.0
+  },
+  {
+    "Class": "ColdInventoryItem_Buildable_GarageDoor",
+    "Property": "CraftTime",
+    "Original": "60",
+    "Paragraph": 593,
+    "Baseline": 60.0
+  },
+  {
+    "Class": "ColdInventoryItem_Buildable_GarageRamp",
+    "Property": "CraftTime",
+    "Original": "60",
+    "Paragraph": 594,
+    "Baseline": 60.0
+  },
+  {
+    "Class": "ColdInventoryItem_Buildable_Oven",
+    "Property": "CraftTime",
+    "Original": "12",
+    "Paragraph": 595,
+    "Baseline": 12.0
+  },
+  {
+    "Class": "ColdInventoryItem_Buildable_PlantBed",
+    "Property": "CraftTime",
+    "Original": "12",
+    "Paragraph": 596,
+    "Baseline": 12.0
+  },
+  {
+    "Class": "ColdInventoryItem_Buildable_Radiator",
+    "Property": "CraftTime",
+    "Original": "12",
+    "Paragraph": 597,
+    "Baseline": 12.0
+  },
+  {
+    "Class": "ColdInventoryItem_Buildable_Refinery",
+    "Property": "CraftTime",
+    "Original": "12",
+    "Paragraph": 598,
+    "Baseline": 12.0
+  },
+  {
+    "Class": "ColdInventoryItem_Buildable_SolarPanel",
+    "Property": "CraftTime",
+    "Original": "12",
+    "Paragraph": 599,
+    "Baseline": 12.0
+  },
+  {
+    "Class": "ColdInventoryItem_Buildable_Windmill",
+    "Property": "CraftTime",
+    "Original": "12",
+    "Paragraph": 600,
+    "Baseline": 12.0
+  },
+  {
+    "Class": "ColdInventoryItem_Buildable_WoodBurner",
+    "Property": "CraftTime",
+    "Original": "12",
+    "Paragraph": 601,
+    "Baseline": 12.0
+  },
+  {
+    "Class": "ColdInventoryItem_ChickenAndSaladSandwich",
+    "Property": "CraftTime",
+    "Original": "35",
+    "Paragraph": 602,
+    "Baseline": 35.0
+  },
+  {
+    "Class": "ColdInventoryItem_ChickenStew",
+    "Property": "CraftTime",
+    "Original": "90",
+    "Paragraph": 603,
+    "Baseline": 90.0
+  },
+  {
+    "Class": "ColdInventoryItem_Chutney",
+    "Property": "CraftTime",
+    "Original": "120",
+    "Paragraph": 604,
+    "Baseline": 120.0
+  },
+  {
+    "Class": "ColdInventoryItem_EggSandwich",
+    "Property": "CraftTime",
+    "Original": "35",
+    "Paragraph": 605,
+    "Baseline": 35.0
+  },
+  {
+    "Class": "ColdInventoryItem_FishAndChips",
+    "Property": "CraftTime",
+    "Original": "90",
+    "Paragraph": 606,
+    "Baseline": 90.0
+  },
+  {
+    "Class": "ColdInventoryItem_FishCakes",
+    "Property": "CraftTime",
+    "Original": "90",
+    "Paragraph": 607,
+    "Baseline": 90.0
+  },
+  {
+    "Class": "ColdInventoryItem_FishPie",
+    "Property": "CraftTime",
+    "Original": "130",
+    "Paragraph": 608,
+    "Baseline": 130.0
+  },
+  {
+    "Class": "ColdInventoryItem_FishingTackle",
+    "Property": "CraftTime",
+    "Original": "20",
+    "Paragraph": 609,
+    "Baseline": 20.0
+  },
+  {
+    "Class": "ColdInventoryItem_HashBrown",
+    "Property": "CraftTime",
+    "Original": "70",
+    "Paragraph": 610,
+    "Baseline": 70.0
+  },
+  {
+    "Class": "ColdInventoryItem_HeavyBolts",
+    "Property": "CraftTime",
+    "Original": "22",
+    "Paragraph": 611,
+    "Baseline": 22.0
+  },
+  {
+    "Class": "ColdInventoryItem_HoneyPork",
+    "Property": "CraftTime",
+    "Original": "150",
+    "Paragraph": 612,
+    "Baseline": 150.0
+  },
+  {
+    "Class": "ColdInventoryItem_Lard",
+    "Property": "CraftTime",
+    "Original": "35",
+    "Paragraph": 613,
+    "Baseline": 35.0
+  },
+  {
+    "Class": "ColdInventoryItem_LiverAndOnions",
+    "Property": "CraftTime",
+    "Original": "90",
+    "Paragraph": 614,
+    "Baseline": 90.0
+  },
+  {
+    "Class": "ColdInventoryItem_MashedPotato",
+    "Property": "CraftTime",
+    "Original": "60",
+    "Paragraph": 615,
+    "Baseline": 60.0
+  },
+  {
+    "Class": "ColdInventoryItem_MetalIngot",
+    "Property": "CraftTime",
+    "Original": "22",
+    "Paragraph": 616,
+    "Baseline": 22.0
+  },
+  {
+    "Class": "ColdInventoryItem_MixedBerryJam",
+    "Property": "CraftTime",
+    "Original": "120",
+    "Paragraph": 617,
+    "Baseline": 120.0
+  },
+  {
+    "Class": "ColdInventoryItem_O2Tank",
+    "Property": "CraftTime",
+    "Original": "30",
+    "Paragraph": 618,
+    "Baseline": 30.0
+  },
+  {
+    "Class": "ColdInventoryItem_Omelette",
+    "Property": "CraftTime",
+    "Original": "80",
+    "Paragraph": 619,
+    "Baseline": 80.0
+  },
+  {
+    "Class": "ColdInventoryItem_Pastry",
+    "Property": "CraftTime",
+    "Original": "18",
+    "Paragraph": 620,
+    "Baseline": 18.0
+  },
+  {
+    "Class": "ColdInventoryItem_RabbitCasserole",
+    "Property": "CraftTime",
+    "Original": "100",
+    "Paragraph": 621,
+    "Baseline": 100.0
+  },
+  {
+    "Class": "ColdInventoryItem_RoastChicken",
+    "Property": "CraftTime",
+    "Original": "140",
+    "Paragraph": 622,
+    "Baseline": 140.0
+  },
+  {
+    "Class": "ColdInventoryItem_RoastRibsAndVeg",
+    "Property": "CraftTime",
+    "Original": "150",
+    "Paragraph": 623,
+    "Baseline": 150.0
+  },
+  {
+    "Class": "ColdInventoryItem_SteakAndDumplingStew",
+    "Property": "CraftTime",
+    "Original": "90",
+    "Paragraph": 624,
+    "Baseline": 90.0
+  },
+  {
+    "Class": "ColdInventoryItem_SteakAndEggs",
+    "Property": "CraftTime",
+    "Original": "90",
+    "Paragraph": 625,
+    "Baseline": 90.0
+  },
+  {
+    "Class": "ColdInventoryItem_SteakAndMushroomPie",
+    "Property": "CraftTime",
+    "Original": "75",
+    "Paragraph": 626,
+    "Baseline": 75.0
+  },
+  {
+    "Class": "ColdInventoryItem_SteakWellington",
+    "Property": "CraftTime",
+    "Original": "90",
+    "Paragraph": 627,
+    "Baseline": 90.0
+  },
+  {
+    "Class": "ColdInventoryItem_SteelCable",
+    "Property": "CraftTime",
+    "Original": "35",
+    "Paragraph": 628,
+    "Baseline": 35.0
+  },
+  {
+    "Class": "ColdInventoryItem_Stick",
+    "Property": "CraftTime",
+    "Original": "4",
+    "Paragraph": 629,
+    "Baseline": 4.0
+  },
+  {
+    "Class": "ColdInventoryItem_TomatoSoup",
+    "Property": "CraftTime",
+    "Original": "70",
+    "Paragraph": 630,
+    "Baseline": 70.0
+  },
+  {
+    "Class": "ColdInventoryItem_Wheat",
+    "Property": "CraftTime",
+    "Original": "35",
+    "Paragraph": 631,
+    "Baseline": 35.0
+  },
+  {
+    "Class": "ColdAccessModule_SmallAnimalTrap",
+    "Property": "DelayUntilAttemptTrap_Min",
+    "Original": "420",
+    "Paragraph": 633,
+    "Baseline": 420.0
+  },
+  {
+    "Class": "ColdAccessModule_SmallAnimalTrap",
+    "Property": "DelayUntilAttemptTrap_Max",
+    "Original": "720",
+    "Paragraph": 634,
+    "Baseline": 720.0
+  },
+  {
+    "Class": "ColdAccessModule_SmallAnimalTrap",
+    "Property": "RadiusToAttractAnimals",
+    "Original": "6000",
+    "Paragraph": 635,
+    "Baseline": 6000.0
+  },
+  {
+    "Class": "ColdAccessModule_FishTrap",
+    "Property": "DelayUntilAttemptTrap_Min",
+    "Original": "420",
+    "Paragraph": 636,
+    "Baseline": 420.0
+  },
+  {
+    "Class": "ColdAccessModule_FishTrap",
+    "Property": "DelayUntilAttemptTrap_Max",
+    "Original": "720",
+    "Paragraph": 637,
+    "Baseline": 720.0
+  },
+  {
+    "Class": "ColdAccessModule_FishTrap",
+    "Property": "RadiusToCheckForNearbyFishTraps",
+    "Original": "1000",
+    "Paragraph": 638,
+    "Baseline": 1000.0
+  },
+  {
+    "Class": "ColdAnimalPawn",
+    "Property": "SightRadius",
+    "Original": "5000",
+    "Paragraph": 640,
+    "Baseline": 5000.0
+  },
+  {
+    "Class": "ColdMoosePawn",
+    "Property": "SightRadius",
+    "Original": "8500",
+    "Paragraph": 641,
+    "Baseline": 8500.0
+  },
+  {
+    "Class": "ColdDeerPawn",
+    "Property": "SightRadius",
+    "Original": "8500",
+    "Paragraph": 642,
+    "Baseline": 8500.0
+  },
+  {
+    "Class": "ColdBoarPawn",
+    "Property": "SightRadius",
+    "Original": "1700",
+    "Paragraph": 643,
+    "Baseline": 1700.0
+  },
+  {
+    "Class": "ColdAnimalPawn",
+    "Property": "HearingThreshold",
+    "Original": "2800",
+    "Paragraph": 644,
+    "Baseline": 2800.0
+  },
+  {
+    "Class": "ColdMoosePawn",
+    "Property": "HearingThreshold",
+    "Original": "5000",
+    "Paragraph": 645,
+    "Baseline": 5000.0
+  },
+  {
+    "Class": "ColdEaglePawn",
+    "Property": "HearingThreshold",
+    "Original": "13000",
+    "Paragraph": 646,
+    "Baseline": 13000.0
+  },
+  {
+    "Class": "ColdDeerPawn",
+    "Property": "HearingThreshold",
+    "Original": "5000",
+    "Paragraph": 647,
+    "Baseline": 5000.0
+  },
+  {
+    "Class": "ColdBoarPawn",
+    "Property": "HearingThreshold",
+    "Original": "3000",
+    "Paragraph": 648,
+    "Baseline": 3000.0
+  },
+  {
+    "Class": "ColdBeesPawn",
+    "Property": "HearingThreshold",
+    "Original": "2250",
+    "Paragraph": 649,
+    "Baseline": 2250.0
+  },
+  {
+    "Class": "ColdBatPawn",
+    "Property": "HearingThreshold",
+    "Original": "5000",
+    "Paragraph": 650,
+    "Baseline": 5000.0
+  },
+  {
+    "Class": "ColdAccessModule_WeaponsBench",
+    "Property": "UpgradeTime",
+    "Original": "20",
+    "Paragraph": 652,
+    "Baseline": 20.0
+  },
+  {
+    "Class": "ColdAccessModule_Campfire",
+    "Property": "FuelConsumptionPerSec",
+    "Original": "0.14",
+    "Paragraph": 653,
+    "Baseline": 0.14
+  },
+  {
+    "Class": "ColdBuildable_BaseCommandUnit",
+    "Property": "ProducePowerPerSec",
+    "Original": "0.33",
+    "Paragraph": 654,
+    "Baseline": 0.33
+  },
+  {
+    "Class": "ColdBuildable_BaseCommandUnit",
+    "Property": "ProduceMassPerSec",
+    "Original": "0.07",
+    "Paragraph": 655,
+    "Baseline": 0.07
+  },
+  {
+    "Class": "ColdBuildable_PowerGenerator",
+    "Property": "PowerOutputPerSec",
+    "Original": "1",
+    "Paragraph": 656,
+    "Baseline": 1.0
+  },
+  {
+    "Class": "ColdAccessModule_PowerGenerator",
+    "Property": "FuelConsumptionPerSec",
+    "Original": "0.066",
+    "Paragraph": 657,
+    "Baseline": 0.066
+  },
+  {
+    "Class": "ColdBuildable_MassFabricator",
+    "Property": "MassGeneratedPerSec",
+    "Original": "0.3",
+    "Paragraph": 658,
+    "Baseline": 0.3
+  },
+  {
+    "Class": "ColdBuildable_MassFabricator",
+    "Property": "MassGeneratedPerSecOverdrive",
+    "Original": "0.6",
+    "Paragraph": 659,
+    "Baseline": 0.6
+  },
+  {
+    "Class": "ColdBuildable_MassFabricator",
+    "Property": "PowerUsagePerSec",
+    "Original": "-2.5",
+    "Paragraph": 660,
+    "Baseline": -2.5
+  },
+  {
+    "Class": "ColdBuildable_MassFabricator",
+    "Property": "PowerUsagePerSecOverdrive",
+    "Original": "-7.5",
+    "Paragraph": 661,
+    "Baseline": -7.5
+  },
+  {
+    "Class": "ColdAccessModule_Refinery",
+    "Property": "LaserCookInterval",
+    "Original": "50",
+    "Paragraph": 662,
+    "Baseline": 50.0
+  },
+  {
+    "Class": "ColdBuildable_Refinery",
+    "Property": "PowerDrainPerLaserPerSec",
+    "Original": "-0.5",
+    "Paragraph": 663,
+    "Baseline": -0.5
+  }
+]

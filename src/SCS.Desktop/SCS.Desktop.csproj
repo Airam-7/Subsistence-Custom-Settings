@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <OutputType>WinExe</OutputType>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>Subsistence Custom Settings</AssemblyName>
+    <Product>Subsistence Custom Settings</Product>
+    <Version>2.0.5</Version>
+    <ApplicationIcon>Assets/app.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup><Resource Include="Assets/app.ico"/><Resource Include="Assets/app-icon.png"/></ItemGroup>
+  <ItemGroup><ProjectReference Include="../SCS.Core/SCS.Core.csproj" /></ItemGroup>
+</Project>

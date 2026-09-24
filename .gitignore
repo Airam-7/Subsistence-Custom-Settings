@@ -1,0 +1,8 @@
+**/bin/
+**/obj/
+.vs/
+.build/
+artifacts/
+Windows*/
+*.user
+*.suo
