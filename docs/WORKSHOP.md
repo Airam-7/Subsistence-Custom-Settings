@@ -17,6 +17,6 @@ Steam installs Workshop files under:
 
 Open the mod's folder and run `Subsistence Custom Settings.exe`.
 
-SCS 2.0.5 · Source tag: v2.0.5. The matching GitHub release contains the executable's SHA-256 checksum.
+SCS 2.0.5 · Release tag: 2.0.5. The published executable's SHA-256 checksum is recorded in the repository's BUILD.md.
 
 Publisher note: replace `<WorkshopID>` with the actual item ID before posting this draft. This text has not been published to Workshop.
