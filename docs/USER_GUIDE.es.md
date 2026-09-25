@@ -1,8 +1,20 @@
-# Subsistence Custom Settings 2.0.5
+# Subsistence Custom Settings 2.0.6
 
-Para quitar hotkeys, retirar perfiles y recuperar respaldos, consulta la [guía de desinstalación y recuperación](RECOVERY.md). Las instrucciones de compilación, CLI y pruebas visuales están en [BUILD.md](../BUILD.md).
+Esta compilación se entrega en Windows-2.0.6, sin reemplazar ejecutables anteriores. Cierra la versión anterior de la app y abre este ejecutable; verifica v2.0.6 en el lateral.
 
-Esta compilación se entrega en Windows-2.0.5, sin reemplazar ejecutables anteriores. Cierra la versión anterior de la app y abre este ejecutable; verifica v2.0.5 en el lateral.
+El código de esta actualización se publica sin adjuntar el EXE; el mantenedor lo publicará por separado. Consulta también la [guía de recuperación](RECOVERY.md) y las [instrucciones de compilación](../BUILD.md).
+
+## Corrección de hotkeys 2.0.6
+
+Esta versión escribe cinco pares de hotkeys (diez líneas): `Bindings=` en `[Engine.PlayerInput]` y `.Bindings=` en `[ColdGame.ColdPlayerInput]`. La implementación sigue la validación empírica aportada por el usuario; no se realizó una nueva prueba dentro del juego desde esta tarea.
+
+Al abrir una instalación configurada o usar **Verify**, se migran automáticamente los bindings SCS antiguos si los cinco perfiles tienen asignaciones completas y no ambiguas. Se conservan sus teclas. Si hay conflictos, faltan asignaciones o las copias difieren, no se modifica el INI: elegir cinco teclas válidas en Hotkeys y usar **Install/Update hotkeys** permite resolverlo explícitamente.
+
+La reparación reconoce la diferencia entre `Bindings=` y `.Bindings=`. Un conjunto correcto de cinco pares no se considera el antiguo problema de shadowing. **Remove SCS hotkeys** elimina entradas SCS simples, con punto y las variantes antiguas con `+`, únicamente para los cinco comandos exactos. Conserva controles, flags, comentarios y comandos ajenos.
+
+Se verifican ambas copias para mostrar una hotkey como instalada; una copia faltante, duplicada, con operador incorrecto o tecla distinta no se muestra como instalada. Se mantienen backups, reemplazo completo y control de cambios concurrentes. Si falta cualquiera de las dos secciones o está duplicada, la instalación se rechaza sin escribir.
+
+Para usarla, cerrar la UI anterior y abrir el EXE de **Windows-2.0.6**. Verificar la versión en el lateral, revisar las teclas y usar **Verify** o **Install/Update hotkeys**. No es necesario cerrar el juego para las operaciones normales de hotkeys.
 
 ## Guardado y cierre
 
@@ -24,10 +36,10 @@ El aviso anterior contemplaba otros perfiles, migraciones y asignaciones pendien
 
 20 ajustes, 154 comandos, catálogo 2.0.1. Perfiles custom con identidad fija, Vanilla de solo lectura y actualización con backup. Refinery Speed hasta ×50 y consumos positivos en UI.
 
-El INI usa ColdGame.ColdPlayerInput si contiene bindings ajenos a SCS; en caso contrario usa Engine.PlayerInput. Se conserva la reparación al inicio/Verify y la escritura de hotkeys con el juego abierto. Backups, preservación de contenido ajeno y comprobación de cambios concurrentes siguen activos. Save all no invoca esa reparación ni la instalación de hotkeys.
+El INI instala los mismos cinco comandos en ambas secciones: Bindings= en Engine.PlayerInput y .Bindings= en ColdGame.ColdPlayerInput. Nunca crea bindings SCS simples en la sección hija. Se conserva la reparación al inicio/Verify y la escritura de hotkeys con el juego abierto. Backups, preservación de contenido ajeno y comprobación de cambios concurrentes siguen activos. Save all no invoca esa reparación ni la instalación de hotkeys.
 
 ## Validación
 
-El artefacto de release pasó 97 casos de regresión en el entorno de publicación, incluidos dos fixtures INI locales opcionales. El árbol público limpio ejecuta 95 pruebas portables sin necesitar esos fixtures privados. La compilación finalizó sin errores ni advertencias. El ejecutable publicado pasó además los escenarios WPF de Save profile aislado, Save all de varios perfiles y preferencias, INI intacto, botón deshabilitado después de guardar, reapertura sin pendientes, validación previa sin escrituras, fallo parcial de perfil, fallo de metadata, reintento y las tres opciones reales del diálogo.
+105 pruebas automáticas aprobadas, compilación sin errores ni advertencias. El ejecutable publicado pasó las pruebas WPF de Save profile aislado, Save all de varios perfiles y preferencias, INI intacto, botón deshabilitado después de guardar, reapertura sin pendientes, validación previa sin escrituras, fallo parcial de perfil, fallo de metadata, reintento y las tres opciones reales del diálogo.
 
 Las pruebas escribieron en instalaciones sintéticas; no se modificó la instalación real del juego. No se realizó una nueva sesión de gameplay.

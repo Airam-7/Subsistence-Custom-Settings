@@ -17,6 +17,6 @@ Steam installs Workshop files under:
 
 Open the mod's folder and run `Subsistence Custom Settings.exe`.
 
-SCS 2.0.5 · Release tag: 2.0.5. The published executable's SHA-256 checksum is recorded in the repository's BUILD.md.
+SCS 2.0.6. This version installs hotkeys in both input sections, using dotted append entries in ColdPlayerInput to preserve inherited controls. Source and validation details are recorded in the repository's BUILD.md.
 
-Publisher note: replace `<WorkshopID>` with the actual item ID before posting this draft. This text has not been published to Workshop.
+Publisher note: publish the 2.0.6 executable separately, record its actual source commit/tag and SHA-256, and replace `<WorkshopID>` with the actual item ID before posting this draft. This text has not been published to Workshop.

@@ -8,7 +8,7 @@ using System.Text.Json;
 namespace SCS.Core;
 
 public sealed record InputBinding(string Section, string Name, string Command, bool Control, bool Shift, bool Alt,
-    bool IgnoreControl, bool IgnoreShift, bool IgnoreAlt, bool Uncertain, int Start, int Length)
+    bool IgnoreControl, bool IgnoreShift, bool IgnoreAlt, bool Uncertain, int Start, int Length, string Operator = "")
 {
     public bool IsScs => Regex.IsMatch(Command.Trim(), @"^exec\s+SCS_(?:Profile[1-4]|Vanilla)\.txt$", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
     public bool Matches(HotkeyAssignment key) => Name.Equals(key.KeyId, StringComparison.OrdinalIgnoreCase)
@@ -20,8 +20,8 @@ public sealed record InputBinding(string Section, string Name, string Command, b
 public sealed class InputIniDocument
 {
     public const string ChildSection = "ColdGame.ColdPlayerInput";
-    public string TargetSection { get; }
-    public bool NeedsRepair => Bindings.Any(b => b.IsScs && !b.Section.Equals(TargetSection, StringComparison.OrdinalIgnoreCase));
+    public bool HasCompleteLayout => Bindings.Count(b => b.IsScs) == 10 && Enum.GetValues<ProfileId>().All(id => InstalledKey(id) is not null);
+    public bool NeedsRepair => Bindings.Any(b => b.IsScs) && !HasCompleteLayout;
     public const string LegacySection = "Engine.PlayerInput";
     public const string Begin = "; >>> SCS HOTKEYS >>>";
     public const string End = "; <<< SCS HOTKEYS <<<";
@@ -33,7 +33,7 @@ public sealed class InputIniDocument
     private readonly Encoding encoding;
     private readonly byte[] bom;
     private readonly List<(int Start, int Length, string Section, string Body)> lines = [];
-    private readonly int sectionEnd;
+    private readonly Dictionary<string, int> sectionEnds;
 
     public InputIniDocument(byte[] bytes)
     {
@@ -74,14 +74,29 @@ public sealed class InputIniDocument
             var ic = Flag("bIgnoreCtrl"); var ish = Flag("bIgnoreShift"); var ia = Flag("bIgnoreAlt");
             var command = fields.GetValueOrDefault("Command", "Unknown command");
             if (command == "Unknown command") uncertain = true;
-            bindings.Add(new(section, key, command, ctrl, shift, alt, ic, ish, ia, uncertain, match.Index, match.Length));
+            var bindingOperator = trimmed[0] is '+' or '.' ? trimmed[..1] : "";
+            bindings.Add(new(section, key, command, ctrl, shift, alt, ic, ish, ia, uncertain, match.Index, match.Length, bindingOperator));
         }
         if (Relevant(section)) ends[section] = Text.Length;
         if (counts.Values.Any(count => count != 1)) throw new FormatException("Duplicate input sections; existing INI was preserved.");
         Bindings = bindings.ToImmutable();
-        TargetSection = Bindings.Any(b => !b.IsScs && b.Section.Equals(ChildSection,StringComparison.OrdinalIgnoreCase)) ? ChildSection : LegacySection;
-        if (!ends.TryGetValue(TargetSection, out var targetEnd)) throw new FormatException("The effective input section is missing. Existing INI was preserved.");
-        sectionEnd = targetEnd;
+        if (ends.Count == 0) throw new FormatException("Input sections are missing. Existing INI was preserved.");
+        sectionEnds = ends;
+    }
+
+    // A profile is installed only when both copies agree, including the array operator.
+    public string? InstalledKey(ProfileId id)
+    {
+        var command = "exec " + (id == ProfileId.Vanilla ? "SCS_Vanilla.txt" : $"SCS_Profile{(int)id}.txt");
+        var matches = Bindings.Where(b => b.IsScs && Regex.IsMatch(b.Command.Trim(), "^exec\\s+" + Regex.Escape(command[5..]) + "$", RegexOptions.IgnoreCase)).ToArray();
+        if (matches.Length != 2 || matches.Any(b => b.Uncertain || b.Control || b.Shift || b.Alt || b.IgnoreControl || b.IgnoreShift || b.IgnoreAlt)) return null;
+        if (matches.Count(b => b.Section.Equals(LegacySection, StringComparison.OrdinalIgnoreCase) && b.Operator == "") != 1
+            || matches.Count(b => b.Section.Equals(ChildSection, StringComparison.OrdinalIgnoreCase) && b.Operator == ".") != 1) return null;
+        var key = matches[0].Name;
+        if (!matches[1].Name.Equals(key, StringComparison.OrdinalIgnoreCase)
+            || !IniHotkeys.AllowedKeys.Contains(key, StringComparer.OrdinalIgnoreCase)
+            || Bindings.Count(b => b.Name.Equals(key, StringComparison.OrdinalIgnoreCase)) != 2) return null;
+        return key;
     }
 
     private static bool Relevant(string section) => section.Equals(ChildSection, StringComparison.OrdinalIgnoreCase) || section.Equals(LegacySection, StringComparison.OrdinalIgnoreCase);
@@ -101,10 +116,22 @@ public sealed class InputIniDocument
     public byte[] Install(IEnumerable<HotkeyAssignment> assignments)
     {
         var clean = new InputIniDocument(RemoveScs());
-        var position = clean.sectionEnd;
-        var prefix = position > 0 && clean.Text[position - 1] is not '\n' and not '\r' ? clean.NewLine : "";
-        var block = prefix + (prefix.Length > 0 ? BeginNoEol : Begin) + clean.NewLine + string.Join(clean.NewLine, assignments.OrderBy(a => a.ProfileId).Select(IniHotkeys.BindingLine)) + clean.NewLine + End + clean.NewLine;
-        return clean.Encode(clean.Text.Insert(position, block));
+        var keys = assignments.ToArray();
+        if (!IniHotkeys.Validate(keys, clean).IsEmpty) throw new ArgumentException("Choose five valid, available hotkeys.");
+        if (!clean.sectionEnds.ContainsKey(LegacySection) || !clean.sectionEnds.ContainsKey(ChildSection))
+            throw new FormatException("Both Engine.PlayerInput and ColdGame.ColdPlayerInput are required. Existing INI was preserved.");
+        var result = new StringBuilder(clean.Text);
+        // Descending offsets preserve insertion positions even when the sections are reversed.
+        foreach (var section in clean.sectionEnds.OrderByDescending(s => s.Value))
+        {
+            var position = section.Value;
+            var prefix = position > 0 && clean.Text[position - 1] is not '\n' and not '\r' ? clean.NewLine : "";
+            var append = section.Key.Equals(ChildSection, StringComparison.OrdinalIgnoreCase) ? "." : "";
+            var block = prefix + (prefix.Length > 0 ? BeginNoEol : Begin) + clean.NewLine
+                + string.Join(clean.NewLine, keys.OrderBy(a => a.ProfileId).Select(a => append + IniHotkeys.BindingLine(a))) + clean.NewLine + End + clean.NewLine;
+            result.Insert(position, block);
+        }
+        return clean.Encode(result.ToString());
     }
 }
 
@@ -178,7 +205,7 @@ public sealed class IniHotkeyService
         {
             var doc = new InputIniDocument(File.ReadAllBytes(iniPath));
             if (!doc.NeedsRepair)
-                return new(true, false, "Hotkeys already use the effective input section.");
+                return new(true, false, "No hotkey migration required.");
             var assignments = new List<HotkeyAssignment>();
             foreach (var id in Enum.GetValues<ProfileId>())
             {
@@ -187,7 +214,8 @@ public sealed class IniHotkeyService
                 if (matches.Length == 0 || matches.Any(b => b.Uncertain || b.Control || b.Shift || b.Alt || b.IgnoreControl || b.IgnoreShift || b.IgnoreAlt)
                     || matches.Select(b => b.Name.ToUpperInvariant()).Distinct().Count() != 1)
                     return new(false, false, "Legacy hotkeys are incomplete or ambiguous. Choose five available keys in Hotkeys and install them; existing bindings were preserved.");
-                assignments.Add(new(id, matches[0].Name));
+                var key = IniHotkeys.AllowedKeys.FirstOrDefault(k => k.Equals(matches[0].Name, StringComparison.OrdinalIgnoreCase)) ?? matches[0].Name;
+                assignments.Add(new(id, key));
             }
             // Update re-reads and validates the complete file before its guarded atomic commit.
             return Update(iniPath, assignments.ToArray(), doc.OriginalBytes);
@@ -233,7 +261,7 @@ public sealed class IniHotkeyService
             void Journal(string state) => RequireWrite(operation + ".json", JsonSerializer.SerializeToUtf8Bytes(new {
                 state, IniPath = path, BackupPath = operation + ".ini", BeforeHash = GameInstallation.Hash(original), AfterHash = GameInstallation.Hash(replacement),
                 OriginalScs = doc.Bindings.Where(b => b.IsScs).Select(b => new { b.Section, b.Start, Text = doc.Text.Substring(b.Start, b.Length) }).ToArray(),
-                AddedLines = assignments?.Select(IniHotkeys.BindingLine).ToArray() ?? []
+                AddedLines = assignments?.SelectMany(a => new[] { new { Section = InputIniDocument.LegacySection, Text = IniHotkeys.BindingLine(a) }, new { Section = InputIniDocument.ChildSection, Text = "." + IniHotkeys.BindingLine(a) } }).ToArray()
             }));
             Journal("Prepared");
             var writer = new AtomicFileWriter(new CheckedCommitter(original, committer ?? new AtomicCommitter(), beforeCommit));
@@ -241,10 +269,10 @@ public sealed class IniHotkeyService
             if (!result.Success) { Journal("Commit failed; original or external changes preserved"); return new(false, false, result.Failure!.Message); }
             committed = File.ReadAllBytes(path).SequenceEqual(replacement);
             if (!committed) { Journal("Recovery blocked: file changed after commit"); return new(false, true, "The INI changed after commit. External changes were preserved; review " + operation + ".json"); }
-            var expectedCount = assignments?.Length ?? 0;
+            var expectedCount = (assignments?.Length ?? 0) * 2;
             var verifiedDocument = new InputIniDocument(replacement);
             var verifiedBindings = verifiedDocument.Bindings.Where(b => b.IsScs).ToArray();
-            if (verifiedBindings.Length != expectedCount || verifiedBindings.Any(b => !b.Section.Equals(verifiedDocument.TargetSection, StringComparison.OrdinalIgnoreCase))) throw new IOException("SCS binding count verification failed.");
+            if (verifiedBindings.Length != expectedCount || assignments is not null && (!verifiedDocument.HasCompleteLayout || assignments.Any(a => !a.KeyId.Equals(verifiedDocument.InstalledKey(a.ProfileId), StringComparison.OrdinalIgnoreCase)))) throw new IOException("SCS binding pair verification failed.");
             Journal("Complete");
             return new(true, true, assignments is null ? "SCS hotkeys removed. Other bindings preserved." : "✓ Hotkeys installed in INI; pending in-game use.");
         }

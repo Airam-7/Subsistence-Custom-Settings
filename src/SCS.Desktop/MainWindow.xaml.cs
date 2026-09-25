@@ -94,14 +94,7 @@ public partial class MainWindow : Window
     private bool CanInstallHotkeys => verification.Ready && inputIni is not null && IniHotkeys.Validate(hotkeys.DraftAssignments,inputIni).IsEmpty;
     private string? InstalledKey(ProfileId id)
     {
-        var command = "exec " + sessions[id].Saved.FileName;
-        if (!verification.Ready) return null;
-        var bindings = inputIni?.Bindings.Where(b => b.IsScs && b.Command.Trim().Equals(command,StringComparison.OrdinalIgnoreCase)).ToArray() ?? [];
-        if(bindings.Length != 1) return null;
-        var b=bindings[0];
-        return b.Section.Equals(inputIni!.TargetSection,StringComparison.OrdinalIgnoreCase) && !b.Uncertain && !b.Control && !b.Shift && !b.Alt && !b.IgnoreControl && !b.IgnoreShift && !b.IgnoreAlt
-            && inputIni!.Conflicts(new(id,b.Name)).IsEmpty
-            && inputIni.Bindings.Count(other => other.Name.Equals(b.Name,StringComparison.OrdinalIgnoreCase))==1 ? b.Name : null;
+        return verification.Ready ? inputIni?.InstalledKey(id) : null;
     }
     private string HotkeyState(ProfileId id) => InstalledKey(id) is string key ? "Installed hotkey: " + key : "Hotkey not installed";
     private bool SetupReady => verification.Ready && inputIni is { NeedsRepair:false } && Enum.GetValues<ProfileId>().All(id=>InstalledKey(id) is not null)
@@ -411,7 +404,7 @@ public partial class MainWindow : Window
         PageTitle("App settings","Your saved workspace is restored when you reopen the app.");var c=Card();c.Children.Add(Text("Local workspace",18));
         c.Children.Add(Text("Saved profiles, friendly names, installation and hotkeys are kept locally. Profile drafts remain in memory until saved. Closing with pending changes asks before discarding them.",13,"Muted"));
         c.Children.Add(Text(store.Folder,12,"Muted"));if(metadataPending)c.Children.Add(ActionButton("Retry workspace save",()=>{var saved=Persist();Render();Notice(saved?"Workspace saved":"Workspace save failed.",!saved);}));
-        c=Card();c.Children.Add(Text("About this version",18));c.Children.Add(Text("App version 2.0.5 · Catalogue 2.0.1 · 23 September 2026\nSimple hotkeys · Original settings protected\nThe app does not track which profile is active in-game.",13,"Muted"));
+        c=Card();c.Children.Add(Text("About this version",18));c.Children.Add(Text("App version 2.0.6 · Catalogue 2.0.1 · 25 September 2026\nSimple hotkeys · Original settings protected\nThe app does not track which profile is active in-game.",13,"Muted"));
     }
     internal async Task SmokeTest(string folder)
     {
@@ -436,10 +429,10 @@ public partial class MainWindow : Window
         Click("Clear saved assignments");Check(hotkeys.SavedAssignments.All(a=>a.KeyId==""),"Clear saved assignments failed");Navigate("Installation");
         hotkeys.SetKey(ProfileId.Profile1,"F8");Render();Check(IdentityLabel.Text.Contains("Hotkey not installed"),"Header claims uninstalled key");
         Click("Install missing profiles only");Check(!new InputIniDocument(File.ReadAllBytes(p.InputIni)).Bindings.Any(b=>b.IsScs),"Profile-only install wrote INI");
-        foreach(var a in IniHotkeys.Defaults)hotkeys.SetKey(a.ProfileId,a.KeyId);Render();Click("Install missing profiles and hotkeys");Check(inputIni is not null && hotkeys.Installed(inputIni),"Hotkey installation failed: "+StatusText.Text);Check(inputIni!.Bindings.Where(b=>b.IsScs).All(b=>b.Section==inputIni!.TargetSection),"Wrong target section");
+        foreach(var a in IniHotkeys.Defaults)hotkeys.SetKey(a.ProfileId,a.KeyId);Render();Click("Install missing profiles and hotkeys");Check(inputIni is not null && hotkeys.Installed(inputIni),"Hotkey installation failed: "+StatusText.Text);Check(inputIni!.HasCompleteLayout,"Wrong target section");
         var migratedFixture=inputIni.Text;var ownLines=string.Join("\r\n",inputIni.Bindings.Where(b=>b.IsScs).Select(b=>inputIni.Text.Substring(b.Start,b.Length).TrimEnd('\r','\n')));
         File.WriteAllBytes(p.InputIni,inputIni.RemoveScs());var cleanFixture=File.ReadAllText(p.InputIni);File.WriteAllText(p.InputIni,cleanFixture.Replace("[Engine.PlayerInput]","[Engine.PlayerInput]\r\n"+ownLines));
-        ReadIni();Render();Check(InstalledKey(ProfileId.Profile1) is null,"Legacy header claims installed");Click("Verify");Check(inputIni!.Bindings.Where(b=>b.IsScs).All(b=>b.Section==inputIni!.TargetSection),"Verify migration failed: "+StatusText.Text);await Capture("07-installation");
+        ReadIni();Render();Check(InstalledKey(ProfileId.Profile1) is null,"Legacy header claims installed");Click("Verify");Check(inputIni!.HasCompleteLayout,"Verify migration failed: "+StatusText.Text);await Capture("07-installation");
         Navigate("Gathering");Click("Save profile");Check(!Current.IsDirty,"Save failed: "+StatusText.Text);
         Check(File.ReadAllText(Path.Combine(binaries,"SCS_Profile1.txt")).Contains("set ColdInventoryItem_Log Count 10"),"Wood command missing");
         Navigate("Hotkeys");Check(!Descendants(PageContent).OfType<TextBlock>().Any(t=>t.Text.Contains("exec SCS_Test")),"Internal command visible");
@@ -448,7 +441,7 @@ public partial class MainWindow : Window
         selected=ProfileId.Vanilla;Navigate("Gathering");Check(settingInputs.Values.All(t=>t.IsReadOnly)&&FooterActions.Children.Count==0,"Vanilla editable");await Capture("09-vanilla");
         selected=ProfileId.Profile1;Navigate("App settings");await Capture("10-app-settings");var cleanStart="[Engine.PlayerInput]\r\nBindings=(Name=\"W\",Command=\"GBA_MoveForward\")\r\n[ColdGame.ColdPlayerInput]\r\nbIsSprintToggle=TRUE\r\nbIsCrouchToggle=TRUE\r\nbIsAimDownSightsToggle=FALSE\r\n";
         File.WriteAllText(p.InputIni,cleanStart+InputIniDocument.Begin+"\r\n"+string.Join("\r\n",hotkeys.SavedAssignments.Select(IniHotkeys.BindingLine))+"\r\n"+InputIniDocument.End+"\r\n");
-        var restored=new MainWindow(store);Check(restored.inputIni is {NeedsRepair:false,TargetSection:InputIniDocument.LegacySection},"Startup failed to repair shadowing child");Check(restored.Current.Saved.Values["WoodYield"].Number==10,"Restart lost values");restored.smokeTesting=true;restored.Close();
+        var restored=new MainWindow(store);Check(restored.inputIni is {NeedsRepair:false,HasCompleteLayout:true},"Startup failed to repair shadowing child");Check(restored.Current.Saved.Values["WoodYield"].Number==10,"Restart lost values");restored.smokeTesting=true;restored.Close();
         ReadIni();var iniBeforeSaveAll=File.ReadAllBytes(p.InputIni);
         sessions[ProfileId.Profile1].SetRawInput("WoodYield","11");sessions[ProfileId.Profile2].SetRawInput("WoodYield","bad");
         hotkeys.SetKey(ProfileId.Profile1,"Insert");Render();Check(SaveAllButton.IsEnabled,"Save all disabled with changes");
@@ -485,7 +478,7 @@ public partial class MainWindow : Window
         }
         Check(ResolveClose(CloseChoice.Save)&&!HasUnsavedChanges&&!SaveAllButton.IsEnabled,"Save all and close did not resolve pending state");
         Check(File.ReadAllBytes(p.InputIni).SequenceEqual(iniBeforeSaveAll),"Save/close touched INI");
-        File.WriteAllText(Path.Combine(folder,"ui-test-results.json"),JsonSerializer.Serialize(new{passed=true,settings=catalog.Supported.Length,commands=new ProfileCompiler(catalog).Compile(Current.Saved).Outputs.Length,hotkeysInstalled=true,occupiedKeyDisabled=true,restartRestored=true,unassignedStart=true,legacyRecovery=true,unverifiedInstallBlocked=true,windowIcon=true,correctInputSection=true,verifyMigratesLegacy=true,startupRepairsShadowing=true,saveAllReadback=true,saveAllDoesNotInstallHotkeys=true,cleanRestart=true,partialFailureKeepsOpen=true,metadataFailureKeepsOpen=true,closeDialogThreeChoices=true},new JsonSerializerOptions{WriteIndented=true}));
+        File.WriteAllText(Path.Combine(folder,"ui-test-results.json"),JsonSerializer.Serialize(new{passed=true,settings=catalog.Supported.Length,commands=new ProfileCompiler(catalog).Compile(Current.Saved).Outputs.Length,hotkeysInstalled=true,occupiedKeyDisabled=true,restartRestored=true,unassignedStart=true,legacyRecovery=true,unverifiedInstallBlocked=true,windowIcon=true,correctInputSection=true,dualSectionBindings=true,childAppendOperator=true,verifyMigratesLegacy=true,startupRepairsShadowing=true,saveAllReadback=true,saveAllDoesNotInstallHotkeys=true,cleanRestart=true,partialFailureKeepsOpen=true,metadataFailureKeepsOpen=true,closeDialogThreeChoices=true},new JsonSerializerOptions{WriteIndented=true}));
     }
     private static IEnumerable<DependencyObject> Descendants(DependencyObject root){for(var i=0;i<VisualTreeHelper.GetChildrenCount(root);i++){var child=VisualTreeHelper.GetChild(root,i);yield return child;foreach(var item in Descendants(child))yield return item;}}
 }

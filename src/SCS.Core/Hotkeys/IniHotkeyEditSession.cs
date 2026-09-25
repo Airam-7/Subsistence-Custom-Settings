@@ -27,9 +27,6 @@ public sealed class IniHotkeyEditSession
     public bool Installed(InputIniDocument document)
     {
         if (!IniHotkeys.Validate(SavedAssignments, document).IsEmpty) return false;
-        var owned = document.Bindings.Where(b => b.IsScs).ToArray();
-        return owned.Length == 5 && SavedAssignments.All(a => owned.Any(b => b.Section.Equals(document.TargetSection, StringComparison.OrdinalIgnoreCase) && !b.Uncertain && b.Name.Equals(a.KeyId, StringComparison.OrdinalIgnoreCase)
-            && b.Command.Trim().Equals("exec " + (a.ProfileId == ProfileId.Vanilla ? "SCS_Vanilla.txt" : $"SCS_Profile{(int)a.ProfileId}.txt"), StringComparison.OrdinalIgnoreCase)
-            && !b.Control && !b.Shift && !b.Alt && !b.IgnoreControl && !b.IgnoreShift && !b.IgnoreAlt));
+        return document.HasCompleteLayout && SavedAssignments.All(a => a.KeyId.Equals(document.InstalledKey(a.ProfileId), StringComparison.OrdinalIgnoreCase));
     }
 }

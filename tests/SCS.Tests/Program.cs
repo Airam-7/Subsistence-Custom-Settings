@@ -292,6 +292,7 @@ Test("malformed profile metadata reports a controlled format error", () =>
 });
 
 V2Cases.Run(Test, root);
+V206Cases.Run(Test, root);
 var report = new { passed = passed.Count, failed = failed.Count, checks = passed, failures = failed, scratch = root };
 File.WriteAllText(Path.Combine(root, "test-results.json"), JsonSerializer.Serialize(report, new JsonSerializerOptions { WriteIndented = true }));
 Console.WriteLine($"TOTAL: {passed.Count} passed; {failed.Count} failed");

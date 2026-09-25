@@ -2,7 +2,7 @@
 
 A Windows companion application for configuring Subsistence gameplay profiles and hotkeys.
 
-**Version 2.0.5 · Windows x64 · C# / WPF / .NET 9**
+**Source version 2.0.6 · Windows x64 · C# / WPF / .NET 9**
 
 This project is open source and licensed under the [MIT License](LICENSE.md).
 The source code is publicly available for transparency, security review, learning, and community contributions.
@@ -20,9 +20,11 @@ The application configures 20 settings and generates 154 commands per complete p
 
 **Save profile** saves only the active profile. **Save all** saves pending profiles and local preferences, including hotkey assignments; it does not install hotkeys. **Install hotkeys** validates assignments and updates `UDKInput.ini`. A saved assignment and an installed binding are distinct states.
 
-Profiles can be saved while the game is running. Hotkey edits are also allowed, with backups and concurrent-change checks. INI writes use the existing normal player-binding table: `ColdGame.ColdPlayerInput` when it contains non-SCS bindings, otherwise `Engine.PlayerInput`.
+Profiles can be saved while the game is running. Hotkey edits are also allowed, with backups and concurrent-change checks. SCS installs five matching binding pairs: `Bindings=` in `Engine.PlayerInput` and `.Bindings=` in `ColdGame.ColdPlayerInput`. The dotted child entries preserve the inherited controls. Older SCS entries are migrated when their assignments are complete and unambiguous; unrelated bindings and flags are preserved. See [2.0.6 changes](CHANGELOG.md).
 
 ## Screenshots
+
+These screenshots illustrate the existing interface; some show an earlier version label. The 2.0.6 change concerns hotkey installation and detection, not a visual redesign.
 
 ### Main interface
 
@@ -54,7 +56,7 @@ It writes SCS profile files and updates `UDKInput.ini`, **and also creates local
 
 ## Build and review
 
-See [BUILD.md](BUILD.md) for the SDK, build, test, publish and checksum commands. The release tag `2.0.5` identifies the published release. The SHA-256 of the published executable is recorded in [BUILD.md](BUILD.md) so downloads can be checked against the published artifact. Independent byte-for-byte reproducibility is not claimed.
+See [BUILD.md](BUILD.md) for the SDK, build, test, publish and checksum commands. The current source is 2.0.6. This update publishes source and documentation only; the maintainer publishes the executable separately. The existing `2.0.5` release/tag is unchanged and does not contain the 2.0.6 fix. Build and artifact identity details are recorded in [BUILD.md](BUILD.md). Independent byte-for-byte reproducibility is not claimed.
 
 | Location | Responsibility |
 | --- | --- |

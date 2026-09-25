@@ -1,11 +1,11 @@
-# Validation: version 2.0.5
+# Validation: version 2.0.6
 
-Reproduction steps for both the portable regression suite and the separate WPF smoke tests are in [BUILD.md](../BUILD.md). Smoke tests use a new synthetic installation on each run and produce a JSON report plus screenshots.
+The 2.0.6 source passed **105 portable regression tests**, with zero build errors or warnings. Tests use synthetic installations. No private INI fixtures are required or distributed.
 
-The clean public source tree was rebuilt on Windows with SDK 9.0.318 before upload: **95 portable tests passed, 0 failed**. The two optional private fixtures were not needed for this run.
+Ten new cases cover exact parent/plain and child/dotted pairs; valid dotted pairs as a byte-identical migration no-op; old parent-only, child-only and mixed installations; duplicate cleanup; mismatched pairs; explicit resolution of ambiguous keys; conflicts with unrelated dotted bindings; reversed sections, LF/CRLF, five encodings and missing final newlines; missing sections; and section-aware journals plus removal. Existing backup, concurrency, atomic-write and preservation checks remain in the suite.
 
-Before source publication, the release was built without errors or warnings and passed 97 regression cases, including two optional local INI fixtures. Those personal fixtures and their paths are not included in the public repository. A normal checkout runs the portable cases without requiring them.
+The locally compiled 2.0.6 EXE passed WPF smoke scenarios for installation, startup/Verify migration, installed-key display, Save all, reopening and the close dialog. Its Hotkeys screenshot and generated synthetic INI were inspected. This source/documentation update does not upload that executable.
 
-The published executable also passed synthetic WPF smoke scenarios covering isolated Save profile, Save all across profiles/preferences, unchanged INI after Save all, disabled Save all after saving, clean reopen, validation before writes, partial write and metadata failures, retries, and the three real close-dialog actions.
+The UE3 behavior motivating the dotted child entries comes from empirical in-game testing reported by the user. These automated checks validate generated files and app behavior, not a new gameplay session or an independent security audit.
 
-All test writes used synthetic installations. No new gameplay session or independent security audit was performed for this release. Re-run the checks using BUILD.md; passing tests do not prove every engine behavior or rule out all defects.
+See [BUILD.md](../BUILD.md) to reproduce both the regression suite and the separate WPF smoke tests.

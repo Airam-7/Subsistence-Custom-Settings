@@ -18,7 +18,7 @@
 | Verified destination folders | Temporary permission probes and sibling temporary files for complete atomic replacement |
 | OS runtime cache | The self-contained .NET single-file host may extract bundled native runtime files |
 
-Profile removal is an explicit operation limited to eligible SCS-managed files, with backup. Hotkey removal identifies only the exact commands `exec SCS_Profile1.txt` through `exec SCS_Profile4.txt` and `exec SCS_Vanilla.txt`; unrelated bindings are preserved.
+Profile removal is an explicit operation limited to eligible SCS-managed files, with backup. Hotkey removal identifies only the exact commands `exec SCS_Profile1.txt` through `exec SCS_Profile4.txt` and `exec SCS_Vanilla.txt`; unrelated bindings are preserved. Removal recognizes plain `Bindings=`, dotted `.Bindings=` and legacy `+Bindings=` SCS entries in both sections.
 
 ## Safeguards and limits
 
@@ -26,7 +26,7 @@ Writes use a complete temporary sibling followed by replacement. INI operations 
 
 The original INI backup is not overwritten. Per-operation backups and journals support diagnosis and recovery. A stale generated Vanilla profile is refreshed with a backup; existing custom profiles are not overwritten by installation of missing files.
 
-Startup/verification can repair SCS bindings in the wrong table and refresh generated Vanilla metadata after validating the saved installation. If ColdPlayerInput contains only SCS bindings, those bindings are moved to Engine.PlayerInput so SCS does not introduce a child input array that shadows normal inherited controls.
+Startup/verification can migrate old SCS bindings and refresh generated Vanilla metadata after validating the saved installation. In 2.0.6, migration produces five plain `Bindings=` entries in `Engine.PlayerInput` and five dotted `.Bindings=` entries in `ColdGame.ColdPlayerInput`. Plain SCS child entries are replaced with dotted entries; non-SCS controls and flags remain unchanged. A complete valid pair set is a migration no-op, including a child section containing only dotted SCS entries. Incomplete, conflicting or ambiguous assignments require explicit user selection of five valid keys. Both required sections must exist and must not be duplicated.
 
 Save all saves local preferences separately from installing hotkeys. Invalid or conflicting bindings cannot be installed. A failed or partial save is reported and does not silently mark remaining work as saved.
 
