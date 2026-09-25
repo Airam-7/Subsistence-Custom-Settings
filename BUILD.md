@@ -38,4 +38,8 @@ Published executable SHA-256:
 
 Compare this with the downloaded executable and `SHA256SUMS.txt` in the release. The source is buildable and uses deterministic compilation, but an independent byte-for-byte identical rebuild has not been established; SDK/runtime patch versions and build environment can affect the binary. Do not describe this release as reproducible in that stronger sense.
 
-The source-availability notice in COPYRIGHT.md governs reuse. These instructions document how the artifact is built for inspection and verification; they do not grant a general redistribution or modification license.
+## License
+
+This project is licensed under the MIT License.
+
+See [LICENSE.md](LICENSE.md) for the full license terms.
