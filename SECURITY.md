@@ -41,3 +41,8 @@ An unused legacy process probe remains in the core source for compatibility; cur
 Start with `src/SCS.Core/IO`, `Installation`, and `Hotkeys/IniHotkeys.cs`, then `src/SCS.Desktop/WorkspaceStore.cs` and `MainWindow.xaml.cs`. Search these files for all filesystem operations rather than relying only on this document.
 
 The release checksum establishes artifact identity, not absence of malware. Source inspection and automated tests are not a third-party security audit. Unsigned executables may prompt Windows reputation warnings; do not disable security protections to run the app.
+
+
+## Reporting security issues
+
+For ordinary bugs, use repository Issues. If a report may expose a security-sensitive weakness, avoid posting exploit details or private configuration publicly. Open an issue with only the minimum non-sensitive context needed to identify the affected SCS version and request a private follow-up before sharing sensitive details.
