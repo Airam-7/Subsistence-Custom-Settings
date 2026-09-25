@@ -1,5 +1,7 @@
 # Subsistence Custom Settings 2.0.5
 
+Para quitar hotkeys, retirar perfiles y recuperar respaldos, consulta la [guía de desinstalación y recuperación](RECOVERY.md). Las instrucciones de compilación, CLI y pruebas visuales están en [BUILD.md](../BUILD.md).
+
 Esta compilación se entrega en Windows-2.0.5, sin reemplazar ejecutables anteriores. Cierra la versión anterior de la app y abre este ejecutable; verifica v2.0.5 en el lateral.
 
 ## Guardado y cierre

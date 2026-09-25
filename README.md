@@ -60,11 +60,13 @@ See [BUILD.md](BUILD.md) for the SDK, build, test, publish and checksum commands
 | --- | --- |
 | `src/SCS.Core` | Catalog, validation, deterministic command compilation, profiles and safe file operations |
 | `src/SCS.Desktop` | WPF interface, draft state, local preferences and close/save workflow |
-| `src/SCS.Cli` | Headless catalog/compiler and installation utilities |
+| `src/SCS.Cli` | Headless profile examples, compilation and migration; output only, no game installation writes |
 | `tests/SCS.Tests` | Executable regression tests using temporary synthetic installations |
 | `examples` | Example profile and generated commands |
 
 See [validation notes](docs/VALIDATION.md), [architecture](docs/ARCHITECTURE.md), and [Workshop description draft](docs/WORKSHOP.md).
+
+For removal, backups and recovery, see [Uninstallation and recovery](docs/RECOVERY.md). CLI examples and the WPF smoke-test procedure are included in [BUILD.md](BUILD.md).
 
 ## Reports
 

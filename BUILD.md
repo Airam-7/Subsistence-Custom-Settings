@@ -26,7 +26,44 @@ For cached offline publication:
 
 Never run tests against a real game folder. Optional external INI fixtures are read-only inputs selected through `SCS_INI_FIXTURE` and `SCS_CLEAN_INI_FIXTURE`; they are not required and are not distributed because they can contain personal configuration.
 
+## CLI examples
+
+After `./build.ps1`, run these from the repository root:
+
+```powershell
+$cli = './.build/artifacts/bin/SCS.Cli/release/SCS.Cli.dll'
+dotnet $cli demo
+dotnet $cli vanilla
+dotnet $cli sample
+dotnet $cli compile ./examples/profile1.json
+dotnet $cli migrate ./examples/profile1.json
+```
+
+`demo` compiles a complete profile with weapon upgrade speed x4 and campfire fuel duration x2. `vanilla` prints baseline commands, and `sample` prints a default JSON profile. `compile` prints commands for a JSON profile; `migrate` prints an updated JSON profile and reports added/removed settings on standard error. Neither modifies the input JSON or game files. Errors return a nonzero exit code. The CLI has no installation or hotkey-writing command.
+
+## WPF smoke tests
+
+These are separate from the 95 portable regression cases run by `build.ps1`. Run them on Windows in an interactive desktop session after publishing the EXE. They exercise WPF controls, save/close behavior and a synthetic installation, and produce screenshots for inspection. They do not launch Subsistence or validate gameplay.
+
+Use a new scratch directory on every run. The test intentionally writes profiles, preferences, an INI and a placeholder game executable under that directory. Never pass a real game folder, an existing workspace, or a previous smoke-test directory.
+
+```powershell
+$exe = (Resolve-Path './Windows-2.0.5/Subsistence Custom Settings.exe').Path
+$scratch = Join-Path ([IO.Path]::GetFullPath('.build')) ('ui-smoke-' + [Guid]::NewGuid().ToString('N'))
+$process = Start-Process -FilePath $exe -ArgumentList ('--smoke-test "{0}"' -f $scratch) -WindowStyle Hidden -Wait -PassThru
+if ($process.ExitCode -ne 0) {
+    throw "WPF smoke test failed. Inspect $scratch/error.txt"
+}
+$report = Get-Content (Join-Path $scratch 'ui-test-results.json') -Raw | ConvertFrom-Json
+if (-not $report.passed) { throw 'WPF smoke report did not pass.' }
+$report
+```
+
+Inspect the PNG files in the same scratch directory, including `11-save-all-clean.png` and `12-close-dialog.png`. A successful report checks interaction behavior; visual inspection is still useful for clipping and layout. Failure details are written to `error.txt` when the test harness can report them. Screenshots of the installation page contain the scratch path; sanitize personal paths before sharing.
+
 ## Release identity
+
+The existing `2.0.5` tag is retained as the original source snapshot. Its README and build guide predate documentation corrections and mention `v2.0.5` and a separate checksum attachment. The actual tag is `2.0.5`; use this guide and the updated release notes for corrected instructions. These documentation updates do not replace the release executable.
 
 Version: **2.0.5**, release tag: **2.0.5**, catalog: **2.0.1**.
 

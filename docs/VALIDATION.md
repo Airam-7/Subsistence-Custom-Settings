@@ -1,5 +1,7 @@
 # Validation: version 2.0.5
 
+Reproduction steps for both the portable regression suite and the separate WPF smoke tests are in [BUILD.md](../BUILD.md). Smoke tests use a new synthetic installation on each run and produce a JSON report plus screenshots.
+
 The clean public source tree was rebuilt on Windows with SDK 9.0.318 before upload: **95 portable tests passed, 0 failed**. The two optional private fixtures were not needed for this run.
 
 Before source publication, the release was built without errors or warnings and passed 97 regression cases, including two optional local INI fixtures. Those personal fixtures and their paths are not included in the public repository. A normal checkout runs the portable cases without requiring them.
