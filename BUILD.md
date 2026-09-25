@@ -28,7 +28,7 @@ Never run tests against a real game folder. Optional external INI fixtures are r
 
 ## Release identity
 
-Version: **2.0.5**, source tag: **v2.0.5**, catalog: **2.0.1**.
+Version: **2.0.5**, release tag: **2.0.5**, catalog: **2.0.1**.
 
 Published executable SHA-256:
 
@@ -36,7 +36,7 @@ Published executable SHA-256:
 2888d4993492b51e9b6294838afe9fbf9ba9c52290e975681369a01bdaed009b
 ```
 
-Compare this with the downloaded executable and `SHA256SUMS.txt` in the release. The source is buildable and uses deterministic compilation, but an independent byte-for-byte identical rebuild has not been established; SDK/runtime patch versions and build environment can affect the binary. Do not describe this release as reproducible in that stronger sense.
+Compare this value with the downloaded executable using `Get-FileHash`. The GitHub release asset for 2.0.5 has the same SHA-256 digest. A separate `SHA256SUMS.txt` asset is optional and is not required for verification. The source is buildable and uses deterministic compilation, but an independent byte-for-byte identical rebuild has not been established; SDK/runtime patch versions and build environment can affect the binary. Do not describe this release as reproducible in that stronger sense.
 
 ## License
 
