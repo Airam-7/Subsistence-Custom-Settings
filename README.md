@@ -4,7 +4,7 @@ A Windows companion application for configuring Subsistence gameplay profiles an
 
 **Version 2.0.5 · Windows x64 · C# / WPF / .NET 9**
 
-This project is open source and licensed under the [MIT License](LICENSE).
+This project is open source and licensed under the [MIT License](LICENSE.md).
 The source code is publicly available for transparency, security review, learning, and community contributions.
 
 ## Download and use
