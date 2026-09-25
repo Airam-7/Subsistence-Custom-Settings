@@ -26,6 +26,6 @@ El INI usa ColdGame.ColdPlayerInput si contiene bindings ajenos a SCS; en caso c
 
 ## Validación
 
-97 pruebas automáticas aprobadas, compilación sin errores ni advertencias. El ejecutable publicado pasó las pruebas WPF de Save profile aislado, Save all de varios perfiles y preferencias, INI intacto, botón deshabilitado después de guardar, reapertura sin pendientes, validación previa sin escrituras, fallo parcial de perfil, fallo de metadata, reintento y las tres opciones reales del diálogo.
+El artefacto de release pasó 97 casos de regresión en el entorno de publicación, incluidos dos fixtures INI locales opcionales. El árbol público limpio ejecuta 95 pruebas portables sin necesitar esos fixtures privados. La compilación finalizó sin errores ni advertencias. El ejecutable publicado pasó además los escenarios WPF de Save profile aislado, Save all de varios perfiles y preferencias, INI intacto, botón deshabilitado después de guardar, reapertura sin pendientes, validación previa sin escrituras, fallo parcial de perfil, fallo de metadata, reintento y las tres opciones reales del diálogo.
 
 Las pruebas escribieron en instalaciones sintéticas; no se modificó la instalación real del juego. No se realizó una nueva sesión de gameplay.
