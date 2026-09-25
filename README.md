@@ -9,7 +9,7 @@ The source code is publicly available for transparency, security review, learnin
 
 ## Download and use
 
-Download `Subsistence Custom Settings.exe` from [Releases](https://github.com/Airam-7/Subsistence-Custom-Settings/releases). The self-contained application includes its .NET runtime; no separate runtime installation is required.
+Download the Windows executable from [Releases](https://github.com/Airam-7/Subsistence-Custom-Settings/releases). The self-contained application includes its .NET runtime; no separate runtime installation is required.
 
 1. Run the application and locate your Subsistence installation.
 2. Verify the game paths and install missing profiles.
@@ -43,7 +43,7 @@ Profiles can be saved while the game is running. Hotkey edits are also allowed, 
 - No separate .NET installation is required; the release executable is self-contained.
 - The application must be able to write to the selected Subsistence installation folders.
 - SCS creates and updates profile files in the game's `Binaries` folder and manages hotkey bindings through `UDKInput.ini`.
-- Steam Workshop, Nexus Mods and GitHub Releases can be used as distribution sources; the application works independently of how it was obtained.
+- SCS is designed to work the same whether it is obtained from Steam Workshop, Nexus Mods or GitHub Releases; runtime behavior is independent of the distribution source.
 - The Windows executable is currently unsigned, so Windows SmartScreen may display a reputation warning. Do not disable security protections; verify the release source and checksum instead.
 
 ## Security / What this app does
@@ -85,3 +85,5 @@ Subsistence Custom Settings is licensed under the MIT License.
 You are free to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software, provided that the original copyright notice and license are preserved.
 
 This project is licensed under the [MIT License](LICENSE.md).
+
+Third-party names, trademarks and assets are not relicensed by the MIT License. See [NOTICE.md](NOTICE.md).
