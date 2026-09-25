@@ -67,10 +67,15 @@ See [validation notes](docs/VALIDATION.md), [architecture](docs/ARCHITECTURE.md)
 
 ## Reports
 
-Use repository Issues for bugs. Include the application version and steps to reproduce, but do not post personal paths, private INI files, or credentials. Contributions, forks and adaptations are welcome under the terms of the MIT License.
+Use repository Issues for bugs. Include the application version and steps to reproduce, but do not post personal paths, private INI files, or credentials.
+
+## Contributing
+
+Bug reports, testing feedback, forks and pull requests are welcome. For larger behavioral changes, please open an issue first so the change can be discussed before implementation.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.
 
 Subsistence Custom Settings is an independent community project and is not affiliated with or endorsed by the developer of Subsistence.
-
 
 ## License
 
