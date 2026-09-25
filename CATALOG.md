@@ -1,6 +1,6 @@
 # Catálogo visible 2.0.1
 
-Fuente: Subsistence_Custom_Settings_Catalogo_y_UI_CORREGIDO.docx. Los multiplicadores parten de ×1 = Vanilla. Los radios son valores directos.
+Este documento resume el catálogo público implementado en SCS. Los multiplicadores parten de ×1 = Vanilla y los radios son valores directos. Los baselines exactos y las reglas de soporte están versionados en `src/SCS.Core/Model/catalog-baselines.json` y `SupportedCatalog.cs`.
 
 | Categoría | Ajuste | Rango |
 |---|---|---|
