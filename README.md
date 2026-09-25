@@ -43,7 +43,8 @@ Profiles can be saved while the game is running. Hotkey edits are also allowed, 
 - No separate .NET installation is required; the release executable is self-contained.
 - The application must be able to write to the selected Subsistence installation folders.
 - SCS creates and updates profile files in the game's `Binaries` folder and manages hotkey bindings through `UDKInput.ini`.
-- Steam Workshop, Nexus Mods and GitHub Releases can all be used as distribution sources; the application works independently of how it was obtained.
+- Steam Workshop, Nexus Mods and GitHub Releases can be used as distribution sources; the application works independently of how it was obtained.
+- The Windows executable is currently unsigned, so Windows SmartScreen may display a reputation warning. Do not disable security protections; verify the release source and checksum instead.
 
 ## Security / What this app does
 
@@ -53,7 +54,7 @@ It writes SCS profile files and updates `UDKInput.ini`, **and also creates local
 
 ## Build and review
 
-See [BUILD.md](BUILD.md) for the SDK, build, test, publish and checksum commands. The release tag `v2.0.5` identifies this source version. The release provides the executable's SHA-256 so downloads can be compared with the published artifact. Independent byte-for-byte reproducibility is not claimed.
+See [BUILD.md](BUILD.md) for the SDK, build, test, publish and checksum commands. The release tag `2.0.5` identifies the published release. The SHA-256 of the published executable is recorded in [BUILD.md](BUILD.md) so downloads can be checked against the published artifact. Independent byte-for-byte reproducibility is not claimed.
 
 | Location | Responsibility |
 | --- | --- |
